@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/asishcse60/go-data-structure/PriorityQueue"
 	"github.com/asishcse60/go-data-structure/Queue"
 )
 
@@ -44,5 +45,30 @@ func main() {
 	v = queue.Length()
 	fmt.Printf("Len: %v\n", v)
 	fmt.Printf("Empty: %v\n", queue.IsEmpty())
+
+	fmt.Println("Queues Section")
+
+	pq := PriorityQueue.PriorityQueue{}
+
+	fmt.Println(pq)
+	pq.Enqueue(1, true)
+	fmt.Println(pq)
+	pq.Enqueue(10, false)
+	fmt.Println(pq)
+
+	elem, _ := pq.Dequeue()
+	fmt.Println(elem)
+	fmt.Println(pq)
+
+	pq.Enqueue(2, true)
+	fmt.Println(pq)
+
+	elem, _ = queue.Dequeue()
+	fmt.Println(elem)
+	fmt.Println(pq)
+
+	elem, _ = pq.Dequeue()
+	fmt.Println(elem)
+	fmt.Println(pq)
 
 }
