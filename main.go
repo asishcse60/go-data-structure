@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/asishcse60/go-data-structure/LinkedList"
+	"github.com/asishcse60/go-data-structure/BinaryTree"
 )
 
 func main() {
@@ -92,17 +92,23 @@ func main() {
 	//v,_= stack.Pop()
 	//fmt.Printf("pop 3: %v\n",v)
 
-	fmt.Println("LinkedList Section")
-	var ll LinkedList.LinkedList
-	ll.Insert("one")
-	ll.Insert("two")
-	ll.Insert("three")
-	ll.Insert("four")
-	ll.Insert("five")
-	ll.Insert("six")
-	ll.List()
-	node := ll.Reverse()
-	ll.ListWithValue(node)
-    fmt.Println("Ok! I am printing here")
+	//fmt.Println("LinkedList Section")
+	//var ll LinkedList.LinkedList
+	//ll.Insert("one")
+	//ll.Insert("two")
+	//ll.Insert("three")
+	//ll.Insert("four")
+	//ll.Insert("five")
+	//ll.Insert("six")
+	//ll.List()
+	//node := ll.Reverse()
+	//ll.ListWithValue(node)
+   // fmt.Println("Ok! I am printing here")
+
+	fmt.Println("Binary Tree Section")
+	myArray :=[]int{1, 2, 3, 4, 5, 6, 6, 6, 6}
+	root:=&BinaryTree.Tree{}
+	root = root.BuildTree(0, myArray, root)
+    root.Print()
 
 }
