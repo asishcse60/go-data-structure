@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/asishcse60/go-data-structure/Stack"
+	"github.com/asishcse60/go-data-structure/LinkedList"
 )
 
 func main() {
@@ -70,26 +70,39 @@ func main() {
 	//fmt.Println(elem)
 	//fmt.Println(pq)
 
-	fmt.Println("Stack Section")
-	stack := Stack.Stack{}
-	stack.Push(1)
-	stack.Push(2)
-	stack.Push(3)
-	stack.Push(4)
-	stack.Push(5)
-	stack.Push(6)
-	v,_:= stack.Pop()
-	fmt.Printf("pop 1: %v\n",v)
-	v,_= stack.Pop()
-	fmt.Printf("pop 2: %v\n",v)
-	stack.Push(9)
-	stack.Push(10)
+	//fmt.Println("Stack Section")
+	//stack := Stack.Stack{}
+	//stack.Push(1)
+	//stack.Push(2)
+	//stack.Push(3)
+	//stack.Push(4)
+	//stack.Push(5)
+	//stack.Push(6)
+	//v,_:= stack.Pop()
+	//fmt.Printf("pop 1: %v\n",v)
+	//v,_= stack.Pop()
+	//fmt.Printf("pop 2: %v\n",v)
+	//stack.Push(9)
+	//stack.Push(10)
 
-	v,_= stack.Peek()
-	fmt.Printf("peek 1: %v\n",v)
-    fmt.Printf("len: %v\n", stack.Length())
+	//v,_= stack.Peek()
+	//fmt.Printf("peek 1: %v\n",v)
+    //fmt.Printf("len: %v\n", stack.Length())
 
-	v,_= stack.Pop()
-	fmt.Printf("pop 3: %v\n",v)
+	//v,_= stack.Pop()
+	//fmt.Printf("pop 3: %v\n",v)
+
+	fmt.Println("LinkedList Section")
+	var ll LinkedList.LinkedList
+	ll.Insert("one")
+	ll.Insert("two")
+	ll.Insert("three")
+	ll.Insert("four")
+	ll.Insert("five")
+	ll.Insert("six")
+	ll.List()
+	node := ll.Reverse()
+	ll.ListWithValue(node)
+    fmt.Println("Ok! I am printing here")
 
 }
