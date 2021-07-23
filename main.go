@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/asishcse60/go-data-structure/BinaryTree"
+	_map "github.com/asishcse60/go-data-structure/map"
 )
 
 func main() {
@@ -105,10 +105,28 @@ func main() {
 	//ll.ListWithValue(node)
    // fmt.Println("Ok! I am printing here")
 
-	fmt.Println("Binary Tree Section")
-	myArray :=[]int{1, 2, 3, 4, 5, 6, 6, 6, 6}
-	root:=&BinaryTree.Tree{}
-	root = root.BuildTree(0, myArray, root)
-    root.Print()
+	//fmt.Println("Binary Tree Section")
+	//myArray :=[]int{1, 2, 3, 4, 5, 6, 6, 6, 6}
+	//root:=&BinaryTree.Tree{}
+	//root = root.BuildTree(0, myArray, root)
+   // root.Print()
 
+	fmt.Println("map data structure Section")
+    m := _map.NewMap()
+    m.Add(10)
+    m.Add(30)
+    m.Add(40)
+    m.Add(10)
+    m.Add(50)
+    m.Add(60)
+    m.Add(50)
+    m.Add(70)
+    m.Add(80)
+    m.PrintMapsKeyValues()
+    v, _:=m.GetValue(50)
+    fmt.Println(v)
+    m.Delete(10)
+	m.PrintMapsKeyValues()
+    fmt.Println(m.ContainsKey(10))
+    fmt.Println(m.ContainsKey(50))
 }
